@@ -5,10 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arif's World</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+ 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+    <header class="split container">
+        <div class="dropMenu">
+            <h2> &lt;Dev Arif&gt;</h2>
+            <i onclick="btnFunc()" class="fas fa-ellipsis-v"></i>
+        </div>
+        <div class="nav">
+            <a href="" class="Heffect">About </a>
+            <a href="" class="Heffect">Contact</a>
+            <a href="">My Work</a>
+        </div>
+    </header>
     
+    <script>
+        let nav=document.querySelector(".nav");
+        
+        function btnFunc(){
+           if(nav.style.display=="none"){
+            
+               nav.style.display="block"
+   
+           }else{
+            nav.style.display="none" 
+           }
+        }
+    </script>
 </body>
 </html>

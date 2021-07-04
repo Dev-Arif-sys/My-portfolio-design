@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    width: 95%;
+    max-width: 1350px;
+    margin: 0 auto;
+
+}
+
+.split{
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+.fas{
+    padding: .6em;
+    display: none;
+    font-size: 1.3em;
+}
+
+@media (max-width:650px) {
+    .split{
+        flex-direction: column;
+        
+    }
+    .dropMenu{
+        display: flex;
+        justify-content: space-between;
+    }
+    .fas{
+        display: inline-block;
+    }
+    .nav{
+      
+        text-align: center;
+        display: none;
+        width: 50%;
+        margin: 0 auto;
+        box-shadow: 0 2px 1px 0 rgba(15, 13, 13,.1);
+    }
+    .nav a{
+    display: block;
+    margin-left: 0;
+    margin-bottom: 1em;
+    
+    }
+    
+    .nav a:last-child{
+        display: inline-block;
+    }
+}
+.split h2{
+    padding: .2em 0;
+    cursor: pointer;
+}
+
+.nav *{
+    display: inline-block;
+    text-decoration: none;
+    padding: 0em 1em;
+   
+    position: relative;
+}
+.nav *+*{
+    margin-left: 1em;
+}
+.nav a:last-child{
+    color: white;
+    padding: .7em 1.2em;
+    border-radius: 6px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: rgb(15, 13, 13);
+    transition: .3s;
+}
+.nav a:last-child:hover{
+    background-color: rgba(15, 13, 13,.8);
+}
+.Heffect::after{
+    content: " ";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+     transform: scale(0);
+    height: 4px;
+    transition: transform .3s;
+    background-color: burlywood;
+}
+.Heffect:hover::after{
+    transform: scale(1);
+}
