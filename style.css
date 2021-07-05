@@ -55,6 +55,7 @@ body{
     margin-left: 0;
     margin-bottom: 1em;
     
+    
     }
     
     .nav a:last-child{
@@ -70,7 +71,7 @@ body{
     display: inline-block;
     text-decoration: none;
     padding: 0em 1em;
-   
+  
     position: relative;
 }
 .nav *+*{
@@ -243,7 +244,7 @@ text-align: center;
     width: 80%;
     max-width: 400px;
     padding: 1em;
-    height: 200px;
+    height: 250px;
     transition: box-shadow .2s;
     box-shadow: 0 4px 8px 0px rgba(15, 13, 13,.8);
 }
