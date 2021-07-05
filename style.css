@@ -2,15 +2,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 body{
     font-family: 'Poppins', sans-serif;
     background-color: #EEEFF1;
+  
 }
 .header-container{
     width: 95%;
     max-width: 1350px;
     margin: 0 auto;
+   
 
 }
 
@@ -18,6 +21,7 @@ body{
     margin-top: 1em;
     display: flex;
     justify-content: space-between;
+   
 }
 .fas{
     padding: .6em;
@@ -30,6 +34,7 @@ body{
         flex-direction: column;
         
     }
+    
     .dropMenu{
         display: flex;
         justify-content: space-between;
@@ -103,19 +108,59 @@ img{
     width: 100%;
 }
 .home {
-    height: 100vh;
+    height: 80vh;
+    position: relative;
 }
-.container{
-    margin: 0 auto;
-    margin-bottom: 3em;
-  
-    display: flex;
-    align-items: center;
-    width: 80%;
-    gap: 4em;
+.social-icon{
+    position: fixed;
+    right: 6em;
+    bottom: 3em; 
+    z-index: 1;   
 }
 @media (max-width:600px) {
-   .container{
+    .social-icon{
+        right: 5px;
+        bottom: 10px;
+    }
+}
+.social-icon a{
+    display: block;
+    text-decoration: none;
+    
+}
+.social-icon i{
+    display:inline-block ;
+    font-size: 2.5em;
+    color: black;
+   
+}
+.social-icon i:hover{
+    animation: iconAni .1s infinite alternate ;
+}
+@keyframes iconAni {
+    50%{transform: rotate(5deg);}
+    25%{transform: rotate(-5deg);}
+    50%{transform: rotate(5deg);}
+    75%{transform: rotate(-5deg);}
+    100%{transform: rotate(5deg);}
+}
+
+.container{
+    margin: 0 auto;
+    margin-bottom: 0em;
+  
+max-width: 1300px;
+    width: 95%;
+   
+}
+.flexible{
+    display: flex;
+    align-items: center;
+    gap: 4em;
+    margin-top: 1em;
+}
+@media (max-width:600px) {
+   .flexible{
        flex-direction: column;
    }
 }
@@ -137,12 +182,15 @@ img{
 .career-text{
     flex-basis: 50%;
 }
-.career-text h2{
+
+ h2{
     font-size: 2em;
+    margin-bottom: 2em;
     font-weight: 600;
 }
 .career-text p{
     font-size: 1.2em;
+    line-height: 1.6em;
 }
 .career-skill{
     flex-basis: 50%;
@@ -155,4 +203,157 @@ img{
  margin: .1em;
  font-weight: 500;
  font-size: 1em;
+}
+
+/* .recognition-design */
+
+
+.recognition{
+    margin-top: 10rem;
+}
+
+.recog-img{
+    flex-basis: 30%;
+text-align: center;
+}
+.recog-img img{
+    width: 100px;
+    border-radius: 50%;
+}
+.recog-img h3{
+    margin: .7em 0;
+}
+.recog-text{
+    flex-basis: 60%;
+    font-size: 1.2em;
+}
+
+/* services-design */
+
+.services{
+    margin-top: 12em;
+    
+}
+.service h4{
+
+    text-align: center;
+    margin-bottom:1em ;
+}
+.service{
+    width: 80%;
+    max-width: 400px;
+    padding: 1em;
+    height: 200px;
+    transition: box-shadow .2s;
+    box-shadow: 0 4px 8px 0px rgba(15, 13, 13,.8);
+}
+.service:hover{
+    box-shadow: 2px 8px 15px 0px rgba(15, 13, 13,.8);
+}
+
+
+
+/* projects-design */
+
+.myProjects{
+    margin-top: 15em;
+}
+.project{
+    position: relative;
+}
+
+.project:hover .project-title{
+    transform: scale(1);
+    
+}
+.project-title{
+    position: absolute;
+    bottom: 4px;
+    transition: transform .4s;
+    left: 0;
+    width: 100%;
+     transform: scale(0);
+    display: flex;
+    justify-content: space-between;
+    
+    align-items: center;
+    padding: 1em 1em;
+    
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.project-title h3{
+    font-size: 1.5rem;
+    color: white;
+    text-transform: uppercase;
+}
+@media (max-width:600px) {
+    .project-title h3{
+        font-size:.8rem ;
+    }
+    .career{
+        margin-top: 10rem;
+    }
+}
+.project-title a{
+    display: inline-block;
+    text-decoration: none;
+    padding: .8em 1.3em;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color .2s;
+    border: 2px solid rgb(134, 119, 95);
+}
+.project-title a:hover{
+   background-color:rgb(134, 119, 95) ;
+}
+
+
+/* contact-design */
+
+.contact{
+    margin-top: 15em;
+    padding: 2em;
+    border: 1px solid rgb(182, 181, 180);
+   
+}
+.contact-text{
+    text-align: center;
+    flex-basis: 50%;
+    font-size: 3em;
+    font-weight: 500;
+}
+.input{
+    width: 100%;
+    padding: .7em 1em;
+    font-size: 1.2em;
+
+}
+textarea{
+    width: 100%;
+    padding: .7em 1em;
+    font-size: 1.2em;
+}
+.btn{
+    display: inline-block;
+  
+    padding: .8em 1.5em;
+    font-size: 1.1em;
+    font-weight: 600;
+    border: 2px solid brown;
+    transition: box-shadow .4s;
+    cursor: pointer;
+   
+}
+.btn:hover{
+    box-shadow: inset 0 2px 10px 7px rgba(0, 0, 0, 0.2);
+}
+.form{
+    flex-basis: 50%;
+}
+
+footer p{
+    text-align: center;
+    margin-top:10em ;
+    margin-bottom: 2em;
 }
