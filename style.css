@@ -123,6 +123,9 @@ img{
         right: 5px;
         bottom: 10px;
     }
+    .home{
+        height: auto;
+    }
 }
 .social-icon a{
     display: block;
@@ -180,6 +183,9 @@ max-width: 1300px;
 }
 
 /* career-design */
+.career{
+    margin-top: 5em;
+}
 .career-text{
     flex-basis: 50%;
 }
